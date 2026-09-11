@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Playbook Digital Vital Health — actions, outils et tutoriels du workshop.">
+<title>Mon Playbook Digital Vital Health — v1.0.1</title>
+<style>
+:root{
+  --bg:#031217;--panel:#09232c;--panel2:#0d2e38;--cyan:#20e7ff;--teal:#19c9b5;
+  --gold:#f3c84b;--green:#55e08e;--white:#f4fbfd;--muted:#a9c7ce;--line:rgba(32,231,255,.20);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--white);
+  background:
+    radial-gradient(circle at 85% 5%,rgba(32,231,255,.11),transparent 25%),
+    radial-gradient(circle at 10% 35%,rgba(25,201,181,.08),transparent 25%),
+    linear-gradient(150deg,#04161c,#010709 72%);
+  min-height:100vh;
+}
+.wrap{max-width:1100px;margin:auto;padding:28px 20px 70px}
+.hero{
+  padding:55px 34px 42px;border:1px solid var(--line);border-radius:30px;
+  background:linear-gradient(145deg,rgba(9,42,52,.93),rgba(4,20,27,.88));
+  box-shadow:0 0 45px rgba(32,231,255,.08);
+}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:900}
+h1{font-size:clamp(40px,7vw,78px);line-height:.98;margin:15px 0 16px;letter-spacing:-.035em}
+.subtitle{font-size:clamp(20px,2.2vw,31px);color:var(--gold);font-weight:900}
+.core{font-size:20px;line-height:1.55;max-width:850px;margin-top:25px;color:#d8edf1}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.badge{border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:#cde7eb;background:rgba(32,231,255,.05);font-size:13px}
+section{margin-top:50px}
+.sectionTitle{font-size:32px;margin:0 0 18px}
+.sectionLead{color:var(--muted);font-size:17px;line-height:1.55;margin-top:-8px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step,.card,.qa,.tool,.prompt{
+  border:1px solid var(--line);background:rgba(8,37,46,.82);border-radius:20px;padding:20px;
+}
+.stepname{color:var(--cyan);font-weight:950;font-size:21px;margin-bottom:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card h3,.qa h3,.tool h3{margin-top:0;color:var(--cyan)}
+.card p,.qa p,.tool p{line-height:1.5}
+ul{padding-left:22px;line-height:1.6}
+.qa{margin-bottom:14px}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
+.chips span{font-size:12px;padding:6px 9px;border-radius:999px;background:rgba(32,231,255,.09);border:1px solid var(--line)}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.first{margin:14px 0;padding:11px 12px;border-left:3px solid var(--gold);background:rgba(243,200,75,.06);line-height:1.45}
+.tutorials{display:grid;gap:9px;margin-top:15px}
+.tutorial{display:block;text-decoration:none;color:var(--white);padding:13px;border-radius:14px;background:#061a21;border:1px solid rgba(255,255,255,.10)}
+.tutorial:hover{border-color:var(--cyan)}
+.tutorial span,.tutorial small{display:block;color:var(--muted);margin-top:4px;line-height:1.4}
+.prompt{margin-bottom:12px}
+.promptLabel{font-weight:900;color:var(--gold);margin-bottom:10px}
+.promptText{line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#e9f7f9}
+.compliance{border:1px solid rgba(85,224,142,.28);background:rgba(85,224,142,.06);border-radius:22px;padding:20px}
+.actions{counter-reset:act;display:grid;gap:12px}
+.action{counter-increment:act;position:relative;padding:18px 18px 18px 65px;border:1px solid var(--line);background:rgba(8,37,46,.82);border-radius:18px;line-height:1.45}
+.action:before{content:counter(act);position:absolute;left:18px;top:14px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--cyan);color:#001014;font-weight:950}
+.muted{color:var(--muted)}
+footer{margin-top:55px;padding-top:25px;border-top:1px solid var(--line);color:#86aeb7;font-size:13px;line-height:1.5}
+@media(max-width:850px){
+  .steps{grid-template-columns:1fr}
+  .grid3,.tools{grid-template-columns:1fr}
+  .hero{padding:36px 22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Vital Health • Workshop Digital</div>
+    <h1>Mon Playbook Digital Vital Health</h1>
+    <div class="subtitle">Créer. Multiplier. Distribuer. Attirer. Suivre.</div>
+    <div class="core">Utilisez le digital avec constance, automation et équipe pour attirer et convertir des clients sans stress.</div>
+    <div class="meta">
+      <span class="badge">Version figée : v1.0.1</span>
+      <span class="badge">Session : VH-2026-09-11</span>
+      <span class="badge">Ressource publique</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="sectionTitle">Le système à retenir</h2>
+    <div class="steps">
+  <article class="step">
+    <div class="stepname">Créer</div>
+    <div>Produisez du contenu vidéo court et authentique qui parle aux émotions des clients sur Facebook, TikTok et YouTube.</div>
+  </article>
+  <article class="step">
+    <div class="stepname">Multiplier</div>
+    <div>Répétez régulièrement la création de vidéos et posts peu nombreux mais fréquents pour un effet cumulé durable.</div>
+  </article>
+  <article class="step">
+    <div class="stepname">Distribuer</div>
+    <div>Programmez et automatisez les publications sur plusieurs réseaux sociaux avec des outils comme Metricool.</div>
+  </article>
+  <article class="step">
+    <div class="stepname">Attirer</div>
+    <div>Changez d’attitude : laissez le contenu venir aux clients plutôt que d’aller les chercher en direct, cela réduit le rejet.</div>
+  </article>
+  <article class="step">
+    <div class="stepname">Suivre</div>
+    <div>Organisez le suivi de vos prospects et déléguez des tâches pour ne pas perdre de temps et gagner en efficacité.</div>
+  </article></div>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Les priorités de notre audience</h2>
+    <p class="sectionLead">Les difficultés exprimées pendant le workshop ont été regroupées en actions simples.</p>
+    <div class="grid3">
+  <article class="card">
+    <h3>Trouver des clients</h3>
+    <p>Apprendre à attirer et convaincre des prospects sans les importuner directement, grâce au digital.</p>
+    <ul><li>Publier du contenu vidéo régulièrement sur Facebook et TikTok.</li><li>Utiliser les témoignages vrais pour renforcer la confiance.</li><li>Appliquer une stratégie inbound (attirer à soi plutôt que chercher).</li></ul>
+  </article>
+  <article class="card">
+    <h3>Maîtriser le digital</h3>
+    <p>Comprendre et utiliser peu à peu les outils et plateformes sociales pour créer, publier et suivre du contenu.</p>
+    <ul><li>Apprendre un petit outil ou une astuce par jour.</li><li>Programmer ses publications pour gagner du temps.</li><li>Utiliser différents réseaux selon le public visé (Facebook 30+, TikTok jeunes).</li></ul>
+  </article>
+  <article class="card">
+    <h3>Difficultés pratiques</h3>
+    <p>Gérer le manque de temps et savoir déléguer ou automatiser pour avancer sans s’épuiser.</p>
+    <ul><li>Mettre en place l’automatisation des publications (ex: Metricool).</li><li>Chercher de l’aide pour publier ou présenter les produits.</li><li>Utiliser des applications multilingues quand besoin.</li></ul>
+  </article></div>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Ce que nous avons retenu du Q&A</h2>
+    
+  <article class="qa">
+    <h3>Comment trouver des clients en utilisant le digital ?</h3>
+    <p>Changez d’attitude : ne cherchez plus les clients, créez des contenus qui les attirent sur Facebook, TikTok et YouTube. Ces contenus travaillent pour vous.</p>
+    <div class="chips"><span>Facebook</span><span>TikTok</span><span>YouTube</span></div>
+    <ul><li>Créer régulièrement des vidéos adaptées aux réseaux sociaux.</li><li>Valoriser des témoignages authentiques.</li><li>Publier peu mais souvent pour un effet long terme.</li></ul>
+  </article>
+  <article class="qa">
+    <h3>Comment éviter le rejet lors de la prospection ?</h3>
+    <p>Le rejet diminue quand les clients viennent vers vous parce qu’ils ont besoin. Le contenu attractif attire naturellement.</p>
+    
+    <ul><li>Mettre en place une stratégie inbound marketing par le contenu</li></ul>
+  </article>
+  <article class="qa">
+    <h3>Quels réseaux sociaux utiliser ?</h3>
+    <p>Utilisez Facebook pour les personnes de 30 ans et plus, TikTok pour les plus jeunes, YouTube pour un large public.</p>
+    <div class="chips"><span>Facebook</span><span>TikTok</span><span>YouTube</span></div>
+    <ul><li>Publier sur plusieurs plateformes pour maximiser la visibilité</li></ul>
+  </article>
+  <article class="qa">
+    <h3>Comment apprendre à maîtriser le digital ?</h3>
+    <p>Avancez pas à pas, un petit geste chaque jour. Soyez patient, l’effet cumulé portera ses fruits.</p>
+    
+    <ul><li>Se fixer des objectifs simples et quotidiens.</li><li>Ne pas se décourager face aux difficultés.</li></ul>
+  </article>
+  <article class="qa">
+    <h3>Que faire en cas de manque de temps ?</h3>
+    <p>Automatisez vos publications avec Metricool et déléguez la création ou diffusion de contenu à une équipe ou prestataire.</p>
+    <div class="chips"><span>Metricool</span></div>
+    <ul><li>Programmer les posts pour plusieurs jours à l’avance.</li><li>Rechercher une aide ou prestataire pour gérer les contenus.</li></ul>
+  </article>
+  <article class="qa">
+    <h3>Comment recruter ou déléguer la présentation des produits ?</h3>
+    <p>Formez ou constituez une équipe. Utilisez des applications multilingues pour présenter les produits sans y être toujours présent.</p>
+    <div class="chips"><span>Applications multilingues pour contenu</span></div>
+    <ul><li>Trouver des personnes pour présenter les produits.</li><li>Utiliser des technologies multilingues.</li></ul>
+  </article>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Votre boîte à outils digitale</h2>
+    <p class="sectionLead">À quoi sert chaque outil, par quoi commencer et où apprendre.</p>
+    <div class="tools">
+  <article class="tool">
+    <div class="toolTop">
+      <h3>ChatGPT</h3>
+      <p>Aide à créer des textes, idées et réponses rapides selon les règles de conformité.</p>
+      <div class="first"><strong>Première action :</strong> Demandez un texte simple sur vos produits sans promesse médicale.</div>
+    </div>
+    <p class="muted">Ressource complémentaire à ajouter dans une prochaine version.</p>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>TikTok</h3>
+      <p>Plateforme pour toucher les jeunes avec des vidéos courtes.</p>
+      <div class="first"><strong>Première action :</strong> Créez ou convertissez un compte TikTok Business pour accès aux outils dédiés.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://getstarted.tiktok.com/Business-accounts?lang=en-US" target="_blank" rel="noopener noreferrer">
+            <strong>TikTok Business Account</strong>
+            <span>TikTok for Business</span>
+            <small>Comprendre comment avoir un compte professionnel sur TikTok.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Facebook / Instagram</h3>
+      <p>Réseautez avec les plus de 30 ans via Facebook et Instagram.</p>
+      <div class="first"><strong>Première action :</strong> Publiez vos premières vidéos ou témoignages sur votre page.</div>
+    </div>
+    <p class="muted">Ressource complémentaire à ajouter dans une prochaine version.</p>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>WhatsApp Business</h3>
+      <p>Gérez vos contacts clients simplement et facilement avec WhatsApp pro.</p>
+      <div class="first"><strong>Première action :</strong> Commencez par installer WhatsApp Business et configurer vos infos.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://www.facebookblueprint.com/student/collection/708529/path/771717" target="_blank" rel="noopener noreferrer">
+            <strong>Use WhatsApp for a business</strong>
+            <span>Meta Blueprint</span>
+            <small>Comprendre les fonctions essentielles pour un usage professionnel.</small>
+          </a>
+          <a class="tutorial" href="https://www.facebook.com/help/search/?q=Connect%20your%20Facebook%20Page%20and%20WhatsApp%20account" target="_blank" rel="noopener noreferrer">
+            <strong>Connect your Facebook Page and WhatsApp account</strong>
+            <span>Meta Help</span>
+            <small>Relier votre page Facebook à WhatsApp pour faciliter les échanges.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Canva</h3>
+      <p>Créer des visuels marketing simples pour les réseaux sociaux.</p>
+      <div class="first"><strong>Première action :</strong> Suivez un cours basique pour faire vos premières images ou posts.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://www.canva.com/design-school/courses/marketing-with-canva/" target="_blank" rel="noopener noreferrer">
+            <strong>Marketing with Canva</strong>
+            <span>Canva Design School</span>
+            <small>Apprendre à faire des visuels marketing simples.</small>
+          </a>
+          <a class="tutorial" href="https://www.canva.com/design-school/courses/social-media-mastery" target="_blank" rel="noopener noreferrer">
+            <strong>Social media mastery</strong>
+            <span>Canva Design School</span>
+            <small>Améliorer votre présence sur les réseaux sociaux.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>CapCut</h3>
+      <p>Monter des vidéos simples adaptées aux réseaux sociaux.</p>
+      <div class="first"><strong>Première action :</strong> Apprenez à monter un clip court à publier sur TikTok ou Facebook.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://www.capcut.com/resource/capcut-tutorial-for-beginners" target="_blank" rel="noopener noreferrer">
+            <strong>CapCut Tutorial for Beginners</strong>
+            <span>CapCut</span>
+            <small>Savoir faire ses premiers montages vidéo.</small>
+          </a>
+          <a class="tutorial" href="https://www.capcut.com/resource/how-to-edit-reels" target="_blank" rel="noopener noreferrer">
+            <strong>How to Edit Reels: A Beginner&#039;s Guide</strong>
+            <span>CapCut</span>
+            <small>Créer des Reels simples pour Instagram et Facebook.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Restream</h3>
+      <p>Faire des lives et créer des clips vidéo courts à partir de vidéos longues.</p>
+      <div class="first"><strong>Première action :</strong> Connectez vos plateformes sociales pour faire un premier live simple.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://support.restream.io/en/articles/10079057-easy-steps-for-your-first-stream" target="_blank" rel="noopener noreferrer">
+            <strong>Easy steps for your first stream</strong>
+            <span>Restream</span>
+            <small>Lancer un premier live pas à pas.</small>
+          </a>
+          <a class="tutorial" href="https://support.restream.io/en/collections/11691393-getting-started" target="_blank" rel="noopener noreferrer">
+            <strong>Getting Started with Viral Clips</strong>
+            <span>Restream</span>
+            <small>Découper un live ou vidéo longue en clips attractifs.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Metricool</h3>
+      <p>Programmer et automatiser la publication de contenu sur plusieurs réseaux.</p>
+      <div class="first"><strong>Première action :</strong> Configurez Metricool pour programmer votre première publication.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://help.metricool.com/getting-started-with-metricool-im4va" target="_blank" rel="noopener noreferrer">
+            <strong>Getting started with Metricool</strong>
+            <span>Metricool</span>
+            <small>Installer et paramétrer Metricool.</small>
+          </a>
+          <a class="tutorial" href="https://help.metricool.com/creating-scheduling-content-e962r" target="_blank" rel="noopener noreferrer">
+            <strong>Creating &amp; scheduling content</strong>
+            <span>Metricool</span>
+            <small>Apprendre à créer et programmer vos posts.</small>
+          </a>
+          <a class="tutorial" href="https://help.metricool.com/social-networks-and-connections-apdq3" target="_blank" rel="noopener noreferrer">
+            <strong>Connecting your social networks</strong>
+            <span>Metricool</span>
+            <small>Connecter tous vos comptes pour tout gérer d’un seul endroit.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Repurpose.io</h3>
+      <p>Publier automatiquement vos vidéos sur plusieurs canaux et formats.</p>
+      <div class="first"><strong>Première action :</strong> Créez un workflow simple pour republier automatiquement un contenu vidéo.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://support.repurpose.io/en/article/quick-start-guide-1aqbuu5/" target="_blank" rel="noopener noreferrer">
+            <strong>Quick Start Guide</strong>
+            <span>Repurpose.io</span>
+            <small>Commencer facilement avec l’outil.</small>
+          </a>
+      </div>
+  </article>
+  <article class="tool">
+    <div class="toolTop">
+      <h3>Fiverr</h3>
+      <p>Trouver des prestataires pour déléguer la création ou publication de contenu.</p>
+      <div class="first"><strong>Première action :</strong> Recherchez un freelance pour créer vos visuels ou vidéos.</div>
+    </div>
+    
+      <div class="tutorials">
+        
+          <a class="tutorial" href="https://help.fiverr.com/hc/en-us/articles/360010558038-How-Fiverr-works-for-clients" target="_blank" rel="noopener noreferrer">
+            <strong>How Fiverr works for clients</strong>
+            <span>Fiverr</span>
+            <small>Savoir comment choisir et commander sur Fiverr.</small>
+          </a>
+      </div>
+  </article></div>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Prompts ChatGPT prêts à utiliser</h2>
+    
+  <article class="prompt">
+    <div class="promptLabel">Créer un contenu</div>
+    <div class="promptText">Créer un texte simple et clair pour présenter un produit Vital Health sans faire de promesse médicale ni financière, en utilisant uniquement des informations officielles et validées.</div>
+  </article>
+  <article class="prompt">
+    <div class="promptLabel">Transformer une idée</div>
+    <div class="promptText">Réécrire ce message en français très simple, attractif et conforme, pour attirer l’attention sur les réseaux sociaux sans promesse médicale.</div>
+  </article>
+  <article class="prompt">
+    <div class="promptLabel">Préparer un suivi</div>
+    <div class="promptText">Préparer un message courtois et respectueux pour relancer un prospect qui a montré de l’intérêt, sans pression commerciale et sans promesse de résultat.</div>
+  </article>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Règles importantes</h2>
+    <div class="compliance"><ul><li>Ne jamais faire de promesse médicale ou financière.</li><li>Utiliser uniquement des informations officielles et validées pour présenter les produits.</li><li>Respecter la réglementation et les bonnes pratiques du marketing digital.</li><li>Ne pas harceler les prospects, préférer attirer par le contenu.</li><li>Protéger la confidentialité des données personnelles des contacts.</li></ul></div>
+  </section>
+
+  <section>
+    <h2 class="sectionTitle">Vos 3 prochaines actions</h2>
+    <div class="actions">
+      <div class="action">Créer et publier une première vidéo courte sur Facebook ou TikTok en valorisant un témoignage client.</div><div class="action">Installer et configurer Metricool pour programmer vos publications sur plusieurs réseaux.</div><div class="action">Chercher un freelance ou une aide pour déléguer la création de contenu via Fiverr.</div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h2 class="sectionTitle">À vérifier</h2>
+    <div class="card"><ul><li>Rechercher et tester les applications multilingues recommandées pour la présentation des produits.</li></ul></div>
+  </section>
+
+  <footer>
+    Version v1.0.1 • Générée le 2026-09-11T19:06:17.625Z.<br>
+    Cette version est figée : toute évolution doit être publiée sous un nouveau numéro de version.
+  </footer>
+</div>
+</body>
+</html>
